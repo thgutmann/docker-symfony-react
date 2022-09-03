@@ -1,5 +1,7 @@
 FROM php:8.1-fpm
 
+MAINTAINER Theo Gutmann <mail@theogutmann.ch>
+
 RUN apt update \
     && apt install -y \
       g++ \
