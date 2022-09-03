@@ -7,7 +7,7 @@ WORKDIR /var/www/ui
 COPY package.json /var/www/ui/
 COPY yarn.lock /var/www/ui/
 
-ENV REACT_APP_API_URL='http://localhost:90/api/v1'
+ENV REACT_APP_API_URL='http://localhost:8080/api/v1'
 RUN yarn install
 
 COPY . /var/www/ui
