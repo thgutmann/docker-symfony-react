@@ -1,13 +1,9 @@
 <?php
 
-$i = 0;
+use App\Kernel;
 
-if ($i == 0) {
-    $name = 'Nadia Marocco';
-} elseif ($i == 1) {
-    $name = 'Theo Gutmann';
-}
+require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
 
-echo 'Bonjour mon ami<br />';
-echo 'Comment tu vas?';
-
+return function (array $context) {
+    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
+};
